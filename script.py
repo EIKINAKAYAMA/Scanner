@@ -32,7 +32,6 @@ for port in range(min_port, max_port):
     thread.start()
     threads.append(thread)
 
-
 for i in range(len(threads)):
     # 該当スレッドが終了するまで待機
     threads[i].join()
@@ -40,5 +39,3 @@ for i in range(len(threads)):
         print ("Port %d open!" %(ports[i]))
 
 print ("Complete")
-
- # SYNスキャン
