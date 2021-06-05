@@ -1,8 +1,8 @@
 import socket
 from concurrent.futures import ThreadPoolExecutor
 
-max_port = 81
-min_port= 79
+max_port = 100
+min_port= 0
 
 threads = []
 ports =[]
