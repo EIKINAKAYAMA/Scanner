@@ -1,2 +1,29 @@
-# PortScanner-by-Python
- PortScanner-by-Python
+# ポートスキャン＆コネクト　（PortScan&connect) written by python
+
+## 本Port Scanについて
+
+【用途】
+
+・ポートスキャン並びに、HTTPリクエストによるレスポンスの受信
+ (お遊びなので、HTTPプロトコル以外の実装はしていません。)
+
+【注意事項】
+
+・外部IPアドレスへの無断でのポートスキャンは違法行為ですので、ご注意ください。
+・原則ローカルでのHTTPリクエストを想定しています。個人所有のIPへのスキャン並びにHTTP 200 レスポンスをGETしたい場合は、connect関数を書き換えてください。
+
+【使用方法】
+
+スキャンするポートの対象範囲を決定することができます。
+(デフォルト:0 - 100)
+
+```python
+max_port = 100
+min_port= 0
+```
+
+スキャン対象が多い場合、並列処理により高速処理が可能です。
+（デフォルト：10）
+```python
+pool = ThreadPoolExecutor(max_workers=10)
+```
